@@ -28,7 +28,7 @@
 
 Запускать его следует командой:
 
-`ansible-playbook -i inventories/production.yaml ~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml`
+`ansible-playbook -i inventory.ini ~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml`
 
 
 
@@ -63,4 +63,4 @@ It is necessary to use the playbook from the collection: ~/.ansible/collections/
 
 It should be launched with the command:
 
-`ansible-playbook -i inventories/production.yaml ~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml`
+`ansible-playbook -i inventory.ini ~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml`
