@@ -7,7 +7,7 @@
 
 Коллекция состоит из двух ролей:
 
-1) master_node – Устанавливает мастер-ноду Kubernetes.
+* master_node – Устанавливает мастер-ноду Kubernetes.
 
 - Инициализирует кластер с помощью kubeadm init.
 
@@ -15,7 +15,7 @@
 
 - Генерирует команду kubeadm join для присоединения рабочих нод.
 
-2) work_node – Устанавливает рабочую ноду и присоединяет её к существующему кластеру.
+* work_node – Устанавливает рабочую ноду и присоединяет её к существующему кластеру.
 
 - Устанавливает Kubernetes на рабочей ноде.
 
@@ -30,6 +30,9 @@
 
 `ansible-playbook -i inventories/production.yaml ~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml`
 
+
+
+
 **Niopt Kubernetes Cluster Automation**
 
 Description:
@@ -39,7 +42,7 @@ Description:
 
 The collection consists of two roles:
 
-1) master_node – Installs a Kubernetes master node.
+* master_node – Installs a Kubernetes master node.
 
 - Initializes the cluster using kubeadm init.
 
@@ -47,8 +50,17 @@ The collection consists of two roles:
 
 - Generates the kubeadm join command to join worker nodes.
 
-2) work_node – Installs a worker node and joins it to an existing cluster.
+* work_node – Installs a worker node and joins it to an existing cluster.
 
 - Installs Kubernetes on the worker node.
 
 - Joins the cluster using kubeadm join provided by the master node.
+
+
+**⚠️ Important**
+
+It is necessary to use the playbook from the collection: ~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml
+
+It should be launched with the command:
+
+`ansible-playbook -i inventories/production.yaml ~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml`
