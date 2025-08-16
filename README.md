@@ -21,6 +21,14 @@
 
 - Выполняет присоединение к кластеру с использованием kubeadm join, предоставленного мастер-нодой.
 
+**⚠️ Важно**
+
+Обязательно использовать плейбук из коллекции:
+~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml
+
+Запускать его следует командой:
+
+`ansible-playbook -i inventories/production.yaml ~/.ansible/collections/ansible_collections/niopt/klaster/playbooks/playbook.yaml`
 
 **Niopt Kubernetes Cluster Automation**
 
