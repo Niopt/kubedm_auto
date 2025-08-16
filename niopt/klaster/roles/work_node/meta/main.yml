@@ -1,0 +1,14 @@
+galaxy_info:
+  role_name: work_node
+  author: Niopt
+  description: Joins the existing Kubernetes cluster using the provided kubeadm join command.
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 20.04
+        - 22.04
+
+dependencies: []

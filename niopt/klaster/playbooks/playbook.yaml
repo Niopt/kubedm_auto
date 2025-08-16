@@ -1,0 +1,28 @@
+--- 
+- hosts: nexus
+  become: yes
+  roles:
+    - gitlab_nexus_sq
+
+- hosts: master_node
+  become: yes
+  roles:
+    - master_node
+  tasks:
+    - name: Get join command
+      ansible.builtin.command: kubeadm token create --print-join-command
+      register: join_command_result
+
+    - set_fact:
+        kubeadm_join: "{{ join_command_result.stdout }}"
+
+    - debug:
+        msg: "{{ kubeadm_join }}"
+
+- hosts: work_node
+  become: yes
+  vars:
+    kubeadm_join: "{{ hostvars[groups['master_node'][0]].kubeadm_join }}"
+  roles:
+    - work_node
+

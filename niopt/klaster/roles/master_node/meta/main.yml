@@ -1,0 +1,14 @@
+galaxy_info:
+  role_name: master_node
+  author: Niopt
+  description: Kubernetes cluster deployment using kubeadm
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 20.04
+        - 22.04
+
+dependencies: []
