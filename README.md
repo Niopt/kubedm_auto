@@ -7,7 +7,7 @@
 
 Коллекция состоит из двух ролей:
 
-* master_node – Устанавливает мастер-ноду Kubernetes.
+1) master_node – Устанавливает мастер-ноду Kubernetes.
 
 - Инициализирует кластер с помощью kubeadm init.
 
@@ -15,7 +15,7 @@
 
 - Генерирует команду kubeadm join для присоединения рабочих нод.
 
-* work_node – Устанавливает рабочую ноду и присоединяет её к существующему кластеру.
+2) work_node – Устанавливает рабочую ноду и присоединяет её к существующему кластеру.
 
 - Устанавливает Kubernetes на рабочей ноде.
 
@@ -42,7 +42,7 @@ Description:
 
 The collection consists of two roles:
 
-* master_node – Installs a Kubernetes master node.
+1) master_node – Installs a Kubernetes master node.
 
 - Initializes the cluster using kubeadm init.
 
@@ -50,7 +50,7 @@ The collection consists of two roles:
 
 - Generates the kubeadm join command to join worker nodes.
 
-* work_node – Installs a worker node and joins it to an existing cluster.
+2) work_node – Installs a worker node and joins it to an existing cluster.
 
 - Installs Kubernetes on the worker node.
 
