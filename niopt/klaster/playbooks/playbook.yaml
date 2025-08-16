@@ -1,6 +1,8 @@
---- 
+---
 - hosts: master_node
   become: yes
+  collections:
+    - niopt.klaster
   roles:
     - master_node
   tasks:
@@ -16,8 +18,9 @@
 
 - hosts: work_node
   become: yes
+  collections:
+    - niopt.klaster
   vars:
     kubeadm_join: "{{ hostvars[groups['master_node'][0]].kubeadm_join }}"
   roles:
     - work_node
-
