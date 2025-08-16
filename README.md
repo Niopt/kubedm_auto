@@ -1,1 +1,0 @@
-# kubedm_auto
